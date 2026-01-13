@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<body>
+
+<header>
+    
+</header>
+
+<!-- ⏳ CONTADOR AQUI -->
+<section id="contador">
+    <h2 class="titulo-contador">Contagem regressiva para 16/03/2027</h2>
+
+    <div class="digital">
+        <div class="box">
+            <span id="dias">00</span>
+            <small>Dias</small>
+        </div>
+
+        <div class="box">
+            <span id="horas">00</span>
+            <small>Horas</small>
+        </div>
+
+        <div class="box">
+            <span id="minutos">00</span>
+            <small>Min</small>
+        </div>
+
+        <div class="box">
+            <span id="segundos">00</span>
+            <small>Seg</small>
+        </div>
+    </div>
+</section>
+
+<nav>
+
+    
+</nav>
+    <meta charset="UTF-8">
+    <title>Meu Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+<head>
+    
+    <style>
+        /* SEU CSS DO SITE */
+
+        /* ⏳ CSS DO CONTADOR (cole aqui) */
+        #contador {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .titulo-contador {
+            color: #60a5fa;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        .digital {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background: radial-gradient(circle at top, #0f172a, #020617);
+            border-radius: 15px;
+            padding: 25px 20px;
+            min-width: 120px;
+            box-shadow:
+                0 0 15px rgba(96, 165, 250, 0.4),
+                inset 0 0 10px rgba(255,255,255,0.05);
+        }
+
+        .box span {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #38bdf8;
+            display: block;
+        }
+
+        .box small {
+            color: #94a3b8;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+     
+    </style>
+</head>
+
+<body><section id="contador" style="text-align:center;">
+    <h2> </h2>
+
+    <div id="timer" style="font-size:2rem; margin-top:20px; color:#60a5fa;">
+        
+    </div>
+</section>
+
+<header>
+    <h1>Oiii, Meu amor </h1>
+    <p> Hoje faz 6 meses que estamos juntos, e eu quero mais uma vez te agradecer por me aturar todo esse tempo, você é muito especial para mim, desde que você apareceu na minha vida, eu nunca mais fui o mesmo, me deu mais ânimo para viver, você é tudo para mim, tudo oq eu sempre quis, é tão ruim estar longe, mas mesmo longe saiba que eu te amo bastante, um montaooo, e to morrendo de saudades, te amo demais meu amor,volta logo pra eu não endoidar kkkkk, feliz meio ano para a gente :)</p>
+    
+</header>
+
+<nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>
+        Este é o meu primeiro site e eu quis dedicar a voce,
+      O motivo que me fez querer estudar tanto pra poder te dar um futuro bom e agradavel
+    </p>
+</section>
+
+<section id="servicos">
+    <h2>14.07</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Rebeca Santos Borges</h3>
+            <p> com muto amor </p>
+        </div>
+        <div class="card">
+            <h3> </h3>
+            <p> o seu de menor preferido</p>
+        </div>
+        <div class="card">
+            <h3> </h3>
+            <p> e o seu amoreco.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Email: guilhermeoliveiragusmao8@gmail.com</p>
+    <p>WhatsApp: (73)98164-8885</p>
+</section>
+
+<footer>
+    © 2026 - Para o amor da minha vida, Rebeca Santos Borges
+</footer>
+<!-- ⏳ SCRIPT DO CONTADOR -->
+    <script>
+        const alvo = new Date("March 16, 2027 00:00:00").getTime();
+
+        function atualizarContador() {
+            const agora = new Date().getTime();
+            const distancia = alvo - agora;
+
+            if (distancia <= 0) {
+                document.querySelector(".digital").innerHTML = "⏰ Evento iniciado!";
+                return;
+            }
+
+            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((distancia / (1000 * 60 * 60)) % 24);
+            const minutos = Math.floor((distancia / (1000 * 60)) % 60);
+            const segundos = Math.floor((distancia / 1000) % 60);
+
+            document.getElementById("dias").innerText = String(dias).padStart(2, "0");
+            document.getElementById("horas").innerText = String(horas).padStart(2, "0");
+            document.getElementById("minutos").innerText = String(minutos).padStart(2, "0");
+            document.getElementById("segundos").innerText = String(segundos).padStart(2, "0");
+        }
+
+        atualizarContador();
+        setInterval(atualizarContador, 1000);
+    </script>
+
+</body>
+</body>
+
+</html>
